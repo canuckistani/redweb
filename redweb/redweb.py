@@ -22,6 +22,33 @@ from bottle import route, request, response, view, send_file, run
 import redis
 import bottle
 import string
+from optparse import OptionParser
+
+parser = OptionParser()
+
+parser.add_option(
+    "-l",
+    "--listen",
+    dest="listen_address",
+    help="The network ip address to listen on. Defaults to 127.0.0.1",
+    default="127.0.0.1"
+)
+
+parser.add_option(
+    "-l",
+    "--listen",
+    dest="listen_address",
+    help="The network ip address to listen on. Defaults to 127.0.0.1",
+    default="127.0.0.1"
+)
+
+parser.add_option(
+    "-p",
+    "--port",
+    dest="port",
+    help="The port to listen for requests on.",
+    default="8001"
+)
 
 # Bottle debug - remove in production!
 bottle.debug(True)
@@ -855,4 +882,4 @@ def template_info():
 
 
 #run it!
-run()
+run(host='0.0.0.0', port='8080')
