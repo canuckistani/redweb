@@ -35,14 +35,6 @@ parser.add_option(
 )
 
 parser.add_option(
-    "-l",
-    "--listen",
-    dest="listen_address",
-    help="The network ip address to listen on. Defaults to 127.0.0.1",
-    default="127.0.0.1"
-)
-
-parser.add_option(
     "-p",
     "--port",
     dest="port",
