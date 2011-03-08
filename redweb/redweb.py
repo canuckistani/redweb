@@ -42,6 +42,8 @@ parser.add_option(
     default="8001"
 )
 
+(options, args) = parser.parse_args()
+
 # Bottle debug - remove in production!
 bottle.debug(True)
 
@@ -874,4 +876,4 @@ def template_info():
 
 
 #run it!
-run(host='0.0.0.0', port='8080')
+run(host=options.listen_address, port=options.port)
