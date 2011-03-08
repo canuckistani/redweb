@@ -39,7 +39,7 @@ parser.add_option(
     "--port",
     dest="port",
     help="The port to listen for requests on.",
-    default="8001"
+    default="8080"
 )
 
 (options, args) = parser.parse_args()

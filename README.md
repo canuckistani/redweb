@@ -16,7 +16,22 @@ Install Bottle and redis-py. Start your Redis server, head to the Redweb directo
 
 `python redweb.py`
 
-The web interface will start on localhost, so point your browser to `http://127.0.0.1:8080/`. 
+Point your browser to `http://127.0.0.1:8080/`.
+
+Command Line Options
+--------------------
+Redweb listens by default on `http://127.0.0.1:8080/`, however you can customize this using command line options:
+
+<pre>python redweb.py -h
+Usage: redweb.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -l LISTEN_ADDRESS, --listen=LISTEN_ADDRESS
+                        The network ip address to listen on. Defaults to
+                        127.0.0.1
+  -p PORT, --port=PORT  The port to listen for requests on.`
+</pre>
 
 The Python code lives at ** redweb.py**, and the web template is at **/views/central.tpl**. I've included some client-side JS form validation, as well.  
 
